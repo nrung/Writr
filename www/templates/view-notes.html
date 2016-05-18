@@ -1,0 +1,12 @@
+<ion-view view-title="View Notes">
+  <ion-content class="padding" ng-controller="NoteCtrl">
+    <button class="button button-block button-balanced" ng-click="newNote()">Add Note</button>
+    <br>
+    <div class="note-icon energized-bg" ng-repeat="note in notes track by note.id" ng-click="openNote(note.id)">
+      <h6 style="color:red; float:right; margin-top: 0;"> <i class="icon ion-close close-button" ng-click="rem(note.id)"></i></h6>
+      <br>
+      <p>{{note.text.substring(0,20) + "..."}}</p>
+    </div>
+
+  </ion-content>
+</ion-view>
